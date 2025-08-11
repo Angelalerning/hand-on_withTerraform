@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 3.0"
+      version = ">= 3.43.0"
 
     }
   }
@@ -16,8 +16,10 @@ terraform {
   }
 }
 provider "azurerm" {
-  skip_provider_registration = true
+
   features {}
+  skip_provider_registration = "none"
+
 }
 resource "azurerm_resource_group" "RG" {
   name     = "813-a8856c5a-hands-on-with-terraform-on-azure"
