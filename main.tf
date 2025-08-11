@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=3.0.0"
+      version = "~> 3.0"
 
     }
   }
@@ -29,6 +29,6 @@ module "storage" {
   version              = "1.0.0"
   location             = azurerm_resource_group.RG.location
   resource_group_name  = azurerm_resource_group.RG.name
-  storage_account_name = "saangela3567"
+  storage_account_name = "saangela35674567"
 
 }
